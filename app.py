@@ -114,7 +114,7 @@ else:
 
                 st.session_state.next_level = next_level
                 st.session_state.answered = True
-                st.experimental_rerun()
+                st.rerun()
 
         else:
             # Show stored feedback
@@ -136,7 +136,7 @@ else:
                 st.session_state.start_time = None
                 st.session_state.answered = False
                 st.session_state.feedback = []
-                st.experimental_rerun()
+                st.rerun()
 
     else:
         st.success("Session complete!")
@@ -153,4 +153,4 @@ else:
 
         if st.button("Start New Session"):
             start_session()
-            st.experimental_rerun()
+            st.rerun()
